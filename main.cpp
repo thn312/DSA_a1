@@ -15,12 +15,12 @@ using namespace std;
 int main() {
     Initialization();
 
-    void*   pData = nullptr;
-    void*   pOutput = nullptr;
+    void*   pData = 0;
+    void*   pOutput = 0;
     int     N;
 
     LoadData(pData);
-    assert(pData != nullptr);
+    assert(pData != 0);
     cout << fixed << setprecision(8);
     string req;
     while (true) {
@@ -34,10 +34,11 @@ int main() {
         if (req == "Exit") {
             break;
         }
+
         ProcessRequest(req.data(), pData, pOutput, N);
         PrintReqOutput<int>(req.data(), (int*)pOutput, N);
         delete [] (int*)pOutput;
-        pOutput = nullptr;
+        pOutput = 0;
     }
 
     ReleaseData(pData);

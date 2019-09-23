@@ -22,7 +22,8 @@
 #include <sstream>
 #include <fstream>
 #include <cassert>
-
+#include"dbLib.h"
+using namespace std;
 /// Prototype declaration
 void Initialization();
 void Finalization();
@@ -30,7 +31,17 @@ void Finalization();
 void ProcessRequest(const char* pRequest, void* pData, void* &pOutput, int &);
 
 template <typename T>
-void PrintReqOutput(const char* pRequest, T* pOutput, int);
+void PrintReqOutput(const char* pRequest, T* pOutput, int N) {
+    /*cout << pRequest << ":";
+    if (pOutput == nullptr) {
+        cout << " error\n";
+        return;
+    }
+    for (int i = 0; i < N; ++i) {
+        cout << ' ' << *pOutput++;
+    }
+    cout << '\n';*/
+}
 
 
 #endif //DSA191_A1_PROCESSDATA_H
