@@ -35,7 +35,7 @@ int TDataset::CLC(string city) { // CL <city_name> -> output integer
 		}
 		p = p->pNext;
 	}
-	
+
 	if (flag) {
 		L1Item<TLine>* _p = this->line.getHead();
 		while (_p) {
